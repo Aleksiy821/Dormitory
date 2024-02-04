@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/log.png" type="image/png" />
+    <link rel="stylesheet" href="./styles/glav.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./scripts/app.js"></script>
+    <link rel="stylesheet" href="./styles/aos.css">
+
+    <title>МТЭК Общежитие : : Главная</title>
+    <script>
+        function buttonClick5(){
+            redirectToNews('news_list.php');
+        }
+        function redirectToNews(url) {
+            window.location.href = url;
+        }
+        function buttonClick6(){
+            redirectToNews('login.php');
+        }
+        function redirectToNews(url) {
+            window.location.href = url;
+        }
+        function buttonClick7() {
+            redirectToHistore('http://mtec.by/ru/главная/history');
+        }
+        function redirectToHistore(url) {
+            window.location.href = url;
+        }
+        function buttonClick8() {
+        var button = document.querySelector('.btn-document');
+        button.classList.add('clicked');
+    
+        setTimeout(function() {
+        button.classList.remove('clicked');
+    
+        
+        var link = document.createElement('a');
+        link.href = './docx/ПРАВИЛА ВНУТРЕННЕГО РАСПОРЯДКА В ОБЩЕЖИТИИ.pdf'; 
+        link.download = './docx/ПРАВИЛА ВНУТРЕННЕГО РАСПОРЯДКА В ОБЩЕЖИТИИ.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        }, 1000); 
+        }
+    </script>
+</head>
+<style>
+    .slick-initialized .slick-slide {
+        display: flex;
+    }
+
+    .slick-dots {
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        transition: .3s opacity;
+        transform: translate3d(0, 0, 0);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 15px;
+    }
+
+    .slick-dots>li {
+        height: 12px;
+        width: 12px;
+        background: transparent;
+        border: 2px solid #fefefe;
+        opacity: 1;
+        transition: 0.2s ease;
+        border-radius: 50%;
+    }
+
+    .slick-dots li button:before {
+        font-family: none;
+    }
+
+    .slick-dots>li.slick-active {
+        background: #fefefe;
+    }
+
+    .slick-dots li.slick-active button:before {
+        opacity: 0;
+    }
+
+    .footer-slider>.slick-list>.slick-track {
+        height: max-content;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="navigation">
+            <div style="text-align: center;">
+                <ul class="nav-header__nav-menu">
+                    <li style="display: inline;"><a href="http://mtec.by/ru/">Главная</a></li>
+                    <li style="display: inline;"><a href="http://mtec.by/ru/entrant">Абитуриенту</a></li>
+                    <li style="display: inline;"><a href="http://mtec.by/ru/students">Учащимся</a></li>
+                    <li style="display: inline;"><a href="http://mtec.by/ru/workers">Сотрудникам</a></li>
+                    <li style="display: inline;"><a href="#">Общежитие</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="logo-container">
+            <img src="./img/logotip.png" alt="Логотип" class="log-navigation">
+        </div>
+    </div>
+    <div class="page__start-screen start-screen">
+        <div class="swiper screen-swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"
+            id="swiper-wrapper">
+
+            <div class="swiper-slide sreen-swiper__item college-item swiper-slide-active" data-swiper-slide-index="0"
+                style="width: 1023px;" role="group" aria-label="1 / 4">
+                <div class="slide-background slider-bg">
+                    <img decoding="async" src="./img/college_new_year.jpg" alt="Колледж" class="slide-img _img">
+                </div>
+                <div class="college__container slide__container wp-block-group__inner-container">
+                    <div class="slide-item__body college-body aos-init aos-animate" data-aos="fade-up">
+                        <p class="slide-body__pre-title">
+                            Добро пожаловать в
+                        </p>
+                        <h2 class="slide-body__title college-title">
+                            “Молодечненский торгово-экономический колледж” Белкоопсоюза
+                        </h2>
+                        <p class="slide-body__text college-text">
+                            Любая выдающаяся карьера начинается с хорошего образования. С нами вы получите возможность
+                            получить качественные знания и компетенции, которые пригодятся вам в будущем
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide sreen-swiper__item research-item swiper-slide-next" data-swiper-slide-index="1"
+                style="width: 1023px;" role="group" aria-label="2 / 4">
+                <div class="slide-background slider-bg">
+                    <img decoding="async" src="./img/researches.jpg" alt="Исследования" class="slide-img _img">
+                </div>
+                <div class="sport__container slide__container wp-block-group__inner-container">
+                    <div class="slide-item__body right research-body">
+                        <h2 class="slide-body__title research-title">
+                            НАУЧНО-ИССЛЕДОВАТЕЛЬСКАЯ ДЕЯТЕЛЬНОСТЬ
+                        </h2>
+                        <p class="slide-body__text research-text">
+                            В колледже создана современная материально-техническая база, а творческий коллектив
+                            педагогических работников готов поддержать вас и помочь в реализации ваших творческих идей
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide sreen-swiper__item sport-item" data-swiper-slide-index="2" style="width: 1023px;"
+                role="group" aria-label="3 / 4">
+                <div class="slide-background slider-bg">
+                    <img decoding="async" src="./img/sport.jpg" alt="Спорт" class="slide-img _img">
+                </div>
+                <div class="sport__container slide__container wp-block-group__inner-container">
+                    <div class="slide-item__body left sport-body">
+                        <h2 class="slide-body__title sport-title">
+                            Спортивная<br>жизнь
+                        </h2>
+                        <p class="slide-body__text sport-text">
+                            Принимайте участие в спортивных мероприятиях. Это поможет вам стать здоровыми, приобрести
+                            новых друзей и разнообразить вашу студенческую жизнь
+                        </p>
+                        <div class="wp-block-buttons">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide sreen-swiper__item research-item swiper-slide-duplicate-prev"
+                data-swiper-slide-index="3" style="width: 1023px;" role="group" aria-label="4 / 4">
+                <div class="slide-background slider-bg">
+                    <img decoding="async" src="./img/art.jpg" alt="Исследования" class="slide-img _img">
+                </div>
+                <div class="sport__container slide__container wp-block-group__inner-container">
+                    <div class="slide-item__body right research-body">
+                        <h2 class="slide-body__title research-title">
+                            Художественная самодеятельность
+                        </h2>
+                        <p class="slide-body__text research-text">
+                            В колледже есть все, чтобы развивать свои таланты и творческие способности. Коллектив
+                            художественной самодеятельности колледжа является многократным победителем смотров-конкурсов
+                            среди учреждений образования потребительской кооперации
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+    </div>
+    </div>
+
+    <div class="button-info">
+        <button class="btn-price" onclick="buttonClick1()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="37" viewBox="0 0 31 37" fill="none">
+                <path
+                    d="M4.95543 25.6927C2.71517 22.9746 1.59431 21.6173 1.17816 19.8539C0.760554 18.0905 1.11726 16.2181 1.83066 12.475L2.24101 10.316C2.83987 7.16546 3.14002 5.59017 4.02888 4.51067C4.91918 3.43294 6.21839 3.069 8.81681 2.34289L10.5974 1.84358C13.6859 0.980334 15.2288 0.547833 16.6831 1.05242C18.1375 1.55876 19.2569 2.9178 21.4971 5.63412L24.1507 8.85151C28.0526 13.5809 30 15.9438 30 18.8799C30 21.8178 28.0512 24.1807 24.1521 28.9083C20.2516 33.6377 18.3028 36.0007 15.8798 36.0007C13.4583 36.0007 11.508 33.6377 7.60895 28.9101L4.95543 25.6927Z"
+                    stroke="#2CA7D4" stroke-width="1.5" />
+                <path
+                    d="M20.4155 24.3794C21.2637 23.3474 21.3783 21.8178 20.6707 20.9581C19.9631 20.1001 18.7001 20.239 17.8504 21.2692C17.0021 22.2995 15.7392 22.4384 15.0316 21.5804C14.324 20.7225 14.4385 19.1911 15.2882 18.1626M15.2882 18.1626L14.7749 17.5402M15.2882 18.1626C15.7682 17.5789 16.3801 17.2836 16.9499 17.2888M20.9273 25L20.414 24.3776C19.834 25.0826 19.0582 25.371 18.3999 25.2057"
+                    stroke="#2CA7D4" stroke-width="1.5" stroke-linecap="round" />
+                <path
+                    d="M12.6306 15.4185C13.7632 14.0453 13.7632 11.819 12.6306 10.4458C11.4981 9.07259 9.66191 9.07259 8.52938 10.4458C7.39686 11.819 7.39685 14.0453 8.52938 15.4185C9.66191 16.7917 11.4981 16.7917 12.6306 15.4185Z"
+                    stroke="#2CA7D4" stroke-width="1.5" />
+            </svg>
+            <span class="text-prise">Услуги в общежитии</span>
+        </button>
+
+
+        <button class="btn-document" onclick="buttonClick8()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="36" viewBox="0 0 29 36" fill="none">
+                <path
+                    d="M21.5161 20.222C21.5161 19.8633 21.3683 19.5193 21.1051 19.2657C20.842 19.0121 20.4851 18.8696 20.1129 18.8696H8.88711C8.51495 18.8696 8.15804 19.0121 7.89488 19.2657C7.63173 19.5193 7.48389 19.8633 7.48389 20.222C7.48389 20.5807 7.63173 20.9246 7.89488 21.1783C8.15804 21.4319 8.51495 21.5744 8.88711 21.5744H20.1129C20.4851 21.5744 20.842 21.4319 21.1051 21.1783C21.3683 20.9246 21.5161 20.5807 21.5161 20.222ZM21.5161 27.4348C21.5161 27.0761 21.3683 26.7321 21.1051 26.4785C20.842 26.2249 20.4851 26.0824 20.1129 26.0824H8.88711C8.51495 26.0824 8.15804 26.2249 7.89488 26.4785C7.63173 26.7321 7.48389 27.0761 7.48389 27.4348C7.48389 27.7935 7.63173 28.1375 7.89488 28.3911C8.15804 28.6447 8.51495 28.7872 8.88711 28.7872H20.1129C20.4851 28.7872 20.842 28.6447 21.1051 28.3911C21.3683 28.1375 21.5161 27.7935 21.5161 27.4348Z"
+                    fill="#2CA7D4" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5.14516 0.837494C3.78058 0.837494 2.47189 1.35994 1.50698 2.2899C0.542078 3.21985 0 4.48115 0 5.79631V31.0412C0 32.3563 0.542078 33.6176 1.50698 34.5476C2.47189 35.4775 3.78058 36 5.14516 36H23.8548C25.2194 36 26.5281 35.4775 27.493 34.5476C28.4579 33.6176 29 32.3563 29 31.0412V11.1482C29 10.4612 28.768 9.79401 28.3377 9.24584L22.7285 2.09072C22.4233 1.70144 22.0286 1.38567 21.5754 1.16822C21.1222 0.950765 20.6229 0.83756 20.1166 0.837494H5.14516ZM2.80645 5.79631C2.80645 4.5521 3.85419 3.5423 5.14516 3.5423H18.7097V11.471C18.7097 12.2175 19.3383 12.8234 20.1129 12.8234H26.1935V31.0412C26.1935 32.2854 25.1458 33.2952 23.8548 33.2952H5.14516C3.85419 33.2952 2.80645 32.2854 2.80645 31.0412V5.79631Z"
+                    fill="#2CA7D4" />
+            </svg>
+            <span class="text-document">Документация общежития</span>
+        </button>
+        <button class="btn-news" onclick="buttonClick3()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="38" viewBox="0 0 31 38" fill="none">
+                <path
+                    d="M22.75 6.23281H28.1875C28.6682 6.23281 29.1292 6.46434 29.4691 6.87649C29.809 7.28863 30 7.84761 30 8.43046V32.6047C30 33.7704 29.6181 34.8884 28.9383 35.7126C28.2584 36.5369 27.3364 37 26.375 37M26.375 37C25.4136 37 24.4916 36.5369 23.8117 35.7126C23.1319 34.8884 22.75 33.7704 22.75 32.6047V4.03515C22.75 3.4523 22.559 2.89331 22.2191 2.48117C21.8792 2.06903 21.4182 1.83749 20.9375 1.83749H2.8125C2.3318 1.83749 1.87078 2.06903 1.53087 2.48117C1.19096 2.89331 1 3.4523 1 4.03515V30.407C1 32.1556 1.57288 33.8325 2.59261 35.069C3.61234 36.3054 4.99539 37 6.4375 37H26.375ZM8.25 10.6281H15.5M8.25 19.4187H15.5M8.25 28.2094H15.5"
+                    stroke="#2CA7D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="text-news">Новости общежития</span>
+        </button>
+        <button class="btn-residents" onclick="buttonClick4()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="36" viewBox="0 0 29 36" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M14.5 0.837494C12.4124 0.837494 10.4103 1.65595 8.93409 3.11282C7.45792 4.56969 6.62862 6.54563 6.62862 8.60595C6.62862 10.6663 7.45792 12.6422 8.93409 14.0991C10.4103 15.556 12.4124 16.3744 14.5 16.3744C16.5876 16.3744 18.5897 15.556 20.0659 14.0991C21.5421 12.6422 22.3714 10.6663 22.3714 8.60595C22.3714 6.54563 21.5421 4.56969 20.0659 3.11282C18.5897 1.65595 16.5876 0.837494 14.5 0.837494ZM9.11432 8.60595C9.11432 7.19626 9.68174 5.8443 10.6917 4.8475C11.7018 3.85069 13.0716 3.29069 14.5 3.29069C15.9284 3.29069 17.2982 3.85069 18.3082 4.8475C19.3183 5.8443 19.8857 7.19626 19.8857 8.60595C19.8857 10.0156 19.3183 11.3676 18.3082 12.3644C17.2982 13.3612 15.9284 13.9212 14.5 13.9212C13.0716 13.9212 11.7018 13.3612 10.6917 12.3644C9.68174 11.3676 9.11432 10.0156 9.11432 8.60595ZM14.5 18.8276C10.6671 18.8276 7.13405 19.6879 4.51743 21.1402C1.93894 22.5728 9.26369e-05 24.7415 9.26369e-05 27.4138V27.5806C-0.0015645 29.481 -0.00322177 31.8655 2.11625 33.5697C3.15859 34.407 4.61852 35.004 6.59051 35.3965C8.56581 35.7923 11.1426 36 14.5 36C17.8573 36 20.4325 35.7923 22.4111 35.3965C24.3831 35.004 25.8414 34.407 26.8854 33.5697C29.0049 31.8655 29.0016 29.481 28.9999 27.5806V27.4138C28.9999 24.7415 27.0611 22.5728 24.4842 21.1402C21.8659 19.6879 18.3346 18.8276 14.5 18.8276ZM2.48579 27.4138C2.48579 26.022 3.51653 24.5109 5.73543 23.2793C7.91621 22.0691 11.0117 21.2808 14.5017 21.2808C17.9883 21.2808 21.0838 22.0691 23.2646 23.2793C25.4851 24.5109 26.5142 26.022 26.5142 27.4138C26.5142 29.553 26.4479 30.7567 25.3144 31.666C24.7013 32.1599 23.6739 32.6424 21.9173 32.9924C20.1657 33.3424 17.7712 33.5468 14.5 33.5468C11.2288 33.5468 8.83261 33.3424 7.08267 32.9924C5.32612 32.6424 4.29869 32.1599 3.68555 31.6676C2.55208 30.7567 2.48579 29.553 2.48579 27.4138Z"
+                    fill="#2CA7D4" />
+            </svg>
+            <span class="text-residents">Проживающие в общежитии</span>
+        </button>
+    </div>
+
+    <div class="content">
+        <div class="text-wrapper">
+            <div class="text-title">
+                <span> ОБ ОБЩЕЖИТИИ</span>
+            </div>
+            <div class="text-content">
+                <span>В 1965 году в небольшом городе Молодечно, окруженном живописными полями и лесами, было принято
+                    решение о строительстве общежития для студентов Молодеченского торгово-экономического колледжа
+                    Белкоопсоюза. Это был период активного развития образования и строительства в регионе, и новое
+                    общежитие стало воплощением современных стандартов комфорта и обучения.</span>
+            </div>
+            <div class="btn-more-details">
+                <button onclick="buttonClick7()">Подробнее</button>
+            </div>
+        </div>
+        <div class="video-wrapper">
+            <video controls="controls">
+                <source src="./videos/Инструкция по общаге.mp4" type="video/mp4" />
+            </video>
+        </div>
+    </div>
+    <div class="news">
+        <span class="text-title-news">
+            ПОСЛЕДНИЕ НОВОСТИ ОБЩЕЖИТИИ
+        </span>
+        <span class="text-title-news-2">
+            Тут мы выкладываем последние новости из жизни общежития.
+        </span>
+        <div class="news-1">
+            
+        </div>
+        <div class="btn-k-news">
+            <button onclick="buttonClick5()">К НОВОСТЯМ</button>
+        </div>
+        <div class="add-news">
+            <button onclick="buttonClick6()">СОЗДАТЬ НОВОСТЬ</button>
+        </div>
+    </div>
+    <div class="info-contact">
+        <div class="map-container">
+            <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acb5e6d71c07f15827665e9b9d790555b1e27ecfd07f4cdf773a40f62ce41efd5&amp;width=720&amp;height=550&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+        <div class="info-next_map">
+            <p class="text-contact">
+                НАША СВЯЗЬ
+            </p>
+            <p class="text-0">Свяжитесь с нами, мы будем рады ответить на все ваши вопросы,<br>касающиеся колледжа и обучения
+                в нем</p>
+            <div class="block">
+                <div class="block">
+                    <h4 class="text-1" style="color:#04819e">Местонахождение</h4>
+                    <p class="text-2">Минская область,<br>г. Молодечно,<br>пл. Центральная, 1а<br>222306</p>
+                </div>
+                <div class="block">
+                    <h4 class="text-3" style="color:#04819e">Электронная почта</h4>
+                    <p class="text-4"><a href="mailto:mtec@bks.by">mtec@bks.by</a></p>
+                </div>
+                <div class="block">
+                    <h4 class="text-5" style="color:#04819e">Тел. / факс приемной директора</h4>
+                    <p class="text-6"><a href="tel:0176771972" data-type="tel" data-id="tel:0176771972">(0176) 77-19-72</a>
+                    </p>
+                    <h4 class="text-7" style="color:#04819e">Приемная общежития</h4>
+                    <p class="text-8"><a href="tel:+0176771972">(033) 347-34-74</a></p>
+                    <h4 class="text-9" style="color:#04819e"></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <hr class="hr-slider">
+        <div class="slider-container">
+            <div class="slider-inner footer-slider">
+                <div><a href="https://president.gov.by/ru"><img src="img/president_c.png" alt="Slide 1"
+                            class="__img"></a></div>
+                <div><a href="https://bks.gov.by/"><img
+                            src="http://mtec.by/wp-content/themes/customTheme/assets/images/footerLinks/belkoop.png"
+                            alt="Slide 2" class="__img"></a></div>
+                <div><a href="https://belayarus.by/"><img
+                            src="http://mtec.by/wp-content/themes/customTheme/assets/images/footerLinks/white_rus.png"
+                            alt="Slide 3" class="__img"></a></div>
+                <div><a href="https://brsm.by/"><img
+                            src="http://mtec.by/wp-content/themes/customTheme/assets/images/footerLinks/brsm.png"
+                            alt="Slide 4" class="__img"></a></div>
+                <div><a href="https://president.gov.by/ru/events/podpisan-ukaz-ob-obyavlenii-2024-goda-godom-kachestva"><img
+                            src="http://mtec.by/wp-content/themes/customTheme/assets/images/footerLinks/2024.png"
+                            alt="Slide 5" class="__img"></a></div>
+                <div><a href="https://pomogut.by/"><img
+                            src="http://mtec.by/wp-content/themes/customTheme/assets/images/footerLinks/pomogut_c.png"
+                            alt="Slide 6" class="__img"></a></div>
+                <div><a href="https://pravo.by/"><img
+                            src="http://mtec.by/wp-content/themes/customTheme/assets/images/footerLinks/pravo_c.png"
+                            alt="Slide 7" class="__img"></a></div>
+                <div><a href="https://edu.gov.by/"><img
+                            src="http://mtec.by/wp-content/themes/customTheme/assets/images/footerLinks/educ_c.png"
+                            alt="Slide 8" class="__img"></a></div>
+                <div><a href="https://uomoik.gov.by/"><img
+                            src="http://mtec.by/wp-content/themes/customTheme/assets/images/footerLinks/minskCom_c.png"
+                            alt="Slide 9" class="__img"></a></div>
+                <div><a href="http://качество-услуг.бел/organization/23506/org-page"><img
+                            src="http://mtec.by/wp-content/themes/customTheme/assets/images/footerLinks/rate_portal_c.png"
+                            alt="Slide 0" class="__img"></a></div>
+            </div>
+        </div>
+        <hr class="hr-slider">
+        <p class="" style="font-size:14px">©МТЭК 2024</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        .snow-canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+        }
+    </style>
+    <canvas class="snow-canvas" speed="1" interaction="false" size="2" count="80" opacity="0.00001"
+        start-color="rgba(253,252,251,1)" end-color="rgba(251,252,253,0.3)" wind-power="0" image="false" width="462"
+        height="746"></canvas>
+    <canvas class="snow-canvas" speed="3" interaction="true" size="6" count="30" start-color="rgba(253,252,251,1)"
+        end-color="rgba(251,252,253,0.3)" opacity="0.00001" wind-power="2" image="false" width="462"
+        height="746"></canvas>
+    <canvas class="snow-canvas" speed="3" interaction="true" size="12" count="20" wind-power="-5"
+        image="./img/snow-style.png" width="462" height="746"></canvas>
+    <script>
+        (function ($) {
+            //for html5 canvas;
+            var $window = window,
+                $timeout = setTimeout;
+
+            var supportCanvas = function () {
+                var eCan = document.createElement("canvas");
+                return (typeof eCan.getContext) == "function";
+            };
+            window.Snow = function (element, settings) {
+                (function () {
+                    var lastTime = 0;
+                    var vendors = ['webkit', 'moz'];
+                    for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+                        window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+                        window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || // name has changed in Webkit
+                            window[vendors[x] + 'CancelRequestAnimationFrame'];
+                    }
+
+                    if (!window.requestAnimationFrame) {
+                        window.requestAnimationFrame = function (callback, element) {
+                            /*
+                            var currTime = new Date().getTime();
+                            var timeToCall = Math.max(0, 16.7 - (currTime - lastTime));
+                            var id = window.setTimeout(function () {
+                                callback(currTime + timeToCall);
+                            }, timeToCall);
+                            lastTime = currTime + timeToCall;
+                             */
+                            var timeToCall = 14; //freezes in safari for windows ,and mac to , so i change time to call with 14;
+                            var id = window.setTimeout(function () {
+                                callback(timeToCall);
+                            }, timeToCall);
+
+                            return id;
+                        };
+                    }
+                    if (!window.cancelAnimationFrame) {
+                        window.cancelAnimationFrame = function (id) {
+                            clearTimeout(id);
+                        };
+                    }
+                }());
+                this.settings = settings,
+                    this.flakes = [],
+                    this.flakeCount = settings.count,
+                    this.mx = -100,
+                    this.my = -100,
+                    this.init(element)
+            };
+            Snow.prototype.init = function (element) {
+                this.canvas = element.get(0), this.ctx = this.canvas.getContext("2d"), this.canvas.width = $window.innerWidth, this.canvas.height = $window.innerHeight, this.flakes = [];
+                for (var i = 0; i < this.flakeCount; i++) {
+                    var x = Math.floor(Math.random() * this.canvas.width),
+                        y = Math.floor(Math.random() * this.canvas.height),
+                        size = Math.floor(100 * Math.random()) % this.settings.size + 2,
+                        speed = Math.floor(100 * Math.random()) % this.settings.speed + Math.random() * size / 10 + .5,
+                        opacity = .5 * Math.random() + this.settings.opacity;
+                    this.flakes.push({
+                        speed: speed,
+                        velY: speed,
+                        velX: 0,
+                        x: x,
+                        y: y,
+                        size: size,
+                        stepSize: Math.random() / 30,
+                        step: 0,
+                        angle: 180,
+                        opacity: opacity
+                    })
+                }
+                1 == this.settings.interaction && this.canvas.addEventListener("mousemove", function (e) {
+                    this.mx = e.clientX, this.my = e.client
+                });
+                var thiz = this;
+                $($window).resize(function () {
+                    thiz.ctx.clearRect(0, 0, thiz.canvas.width, thiz.canvas.height), thiz.canvas.width = $window.innerWidth, thiz.canvas.height = $window.innerHeight
+                });
+                if (typeof this.settings.image === "string") {
+                    this.image = $("<img src='" + this.settings.image + "' style='display: none'>");
+                };
+
+                this.snow();
+            }, Snow.prototype.snow = function () {
+                var thiz = this,
+                    render = function () {
+                        thiz.ctx.clearRect(0, 0, thiz.canvas.width, thiz.canvas.height);
+                        for (var i = 0; i < thiz.flakeCount; i++) {
+                            var flake = thiz.flakes[i],
+                                x = thiz.mx,
+                                y = thiz.my,
+                                minDist = 100,
+                                x2 = flake.x,
+                                y2 = flake.y,
+                                dist = Math.sqrt((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y));
+                            if (minDist > dist) {
+                                var force = minDist / (dist * dist),
+                                    xcomp = (x - x2) / dist,
+                                    ycomp = (y - y2) / dist,
+                                    deltaV = force / 2;
+                                flake.velX -= deltaV * xcomp, flake.velY -= deltaV * ycomp
+                            } else switch (flake.velX *= .98, flake.velY <= flake.speed && (flake.velY = flake.speed), thiz.settings.windPower) {
+                                case !1:
+                                    flake.velX += Math.cos(flake.step += .05) * flake.stepSize;
+                                    break;
+                                case 0:
+                                    flake.velX += Math.cos(flake.step += .05) * flake.stepSize;
+                                    break;
+                                default:
+                                    flake.velX += .01 + thiz.settings.windPower / 100
+                            }
+                            if (flake.y += flake.velY, flake.x += flake.velX, (flake.y >= thiz.canvas.height || flake.y <= 0) && thiz.resetFlake(flake), (flake.x >= thiz.canvas.width || flake.x <= 0) && thiz.resetFlake(flake), 0 == thiz.settings.image) {
+                                var grd = thiz.ctx.createRadialGradient(flake.x, flake.y, 0, flake.x, flake.y, flake.size - 1);
+                                grd.addColorStop(0, thiz.settings.startColor), grd.addColorStop(1, thiz.settings.endColor), thiz.ctx.fillStyle = grd, thiz.ctx.beginPath(), thiz.ctx.arc(flake.x, flake.y, flake.size, 0, 2 * Math.PI), thiz.ctx.fill()
+                            } else thiz.ctx.drawImage(thiz.image.get(0), flake.x, flake.y, 2 * flake.size, 2 * flake.size)
+                        }
+                        $window.cancelAnimationFrame(render), $window.requestAnimationFrame(render)
+                    };
+                render()
+            }, Snow.prototype.resetFlake = function (flake) {
+                if (0 == this.settings.windPower || 0 == this.settings.windPower) flake.x = Math.floor(Math.random() * this.canvas.width), flake.y = 0;
+                else if (this.settings.windPower > 0) {
+                    var xarray = Array(Math.floor(Math.random() * this.canvas.width), 0),
+                        yarray = Array(0, Math.floor(Math.random() * this.canvas.height)),
+                        allarray = Array(xarray, yarray),
+                        selected_array = allarray[Math.floor(Math.random() * allarray.length)];
+                    flake.x = selected_array[0], flake.y = selected_array[1]
+                } else {
+                    var xarray = Array(Math.floor(Math.random() * this.canvas.width), 0),
+                        yarray = Array(this.canvas.width, Math.floor(Math.random() * this.canvas.height)),
+                        allarray = Array(xarray, yarray),
+                        selected_array = allarray[Math.floor(Math.random() * allarray.length)];
+                    flake.x = selected_array[0], flake.y = selected_array[1]
+                }
+                flake.size = Math.floor(100 * Math.random()) % this.settings.size + 2, flake.speed = Math.floor(100 * Math.random()) % this.settings.speed + Math.random() * flake.size / 10 + .5, flake.velY = flake.speed, flake.velX = 0, flake.opacity = .5 * Math.random() + this.settings.opacity
+            };
+
+            $.fn.snow = function () {
+                var userCanvas = supportCanvas();
+                userCanvas && $(this).each(function (i, e) {
+                    var scope = {};
+                    $.each(e.attributes, function (index, key) {
+                        scope[$.camelCase(key.name)] = Number(Number(key.value)) ? Number(key.value) : key.value
+                    });
+                    if (typeof scope.image === "string" && scope.image === "false") {
+                        scope.image = false
+                    };
+
+                    new Snow($(e), {
+                        speed: 1 || 0,
+                        interaction: scope.interaction || !0,
+                        size: scope.size || 2,
+                        count: scope.count || 200,
+                        opacity: scope.opacity || 1,
+                        startColor: scope.startColor || "rgba(255,255,255,1)",
+                        endColor: scope.endColor || "rgba(255,255,255,0)",
+                        windPower: scope.windPower || 0,
+                        image: scope.image || !1
+                    });
+                });
+                if (!userCanvas) {
+                    var setting = {};
+                    $(this).each(function (i, e) {
+                        setting["image"] = $(e).attr("image") || "./img/snow-style.png";
+                        $(this).remove();
+                        createSnow("", 40);
+                    });
+                };
+            };
+
+            //for ie678
+            /**
+             * method createSnow("", 40);
+             * method removeSnow();
+             */
+            function k(a, b, c) {
+                if (a.addEventListener) a.addEventListener(b, c, false);
+                else a.attachEvent && a.attachEvent("on" + b, c)
+            }
+
+            function g(a) {
+                if (typeof window.onload != "function") window.onload = a;
+                else {
+                    var b = window.onload;
+                    window.onload = function () {
+                        b();
+                        a()
+                    }
+                }
+            }
+
+            function h() {
+                var a = {};
+                for (type in {
+                    Top: "",
+                    Left: ""
+                }) {
+                    var b = type == "Top" ? "Y" : "X";
+                    if (typeof window["page" + b + "Offset"] != "undefined") a[type.toLowerCase()] = window["page" + b + "Offset"];
+                    else {
+                        b = document.documentElement.clientHeight ? document.documentElement : document.body;
+                        a[type.toLowerCase()] = b["scroll" + type]
+                    }
+                }
+                return a
+            }
+
+            function l() {
+                var a = document.body,
+                    b;
+                if (window.innerHeight) b = window.innerHeight;
+                else if (a.parentElement.clientHeight) b = a.parentElement.clientHeight;
+                else if (a && a.clientHeight) b = a.clientHeight;
+                return b
+            };
+            var j = true;
+            var f = true;
+            var m = null;
+            var c = [];
+            var createSnow = function (a, b) {
+                clearInterval(m);
+                c = [];
+                m = setInterval(function () {
+                    f && b > c.length && Math.random() < b * 0.0025 && c.push(new i(a));
+                    !f && !c.length && clearInterval(m);
+                    for (var e = h().top, n = l(), d = c.length - 1; d >= 0; d--)
+                        if (c[d]) if (c[d].top < e || c[d].top + c[d].size + 1 > e + n) {
+                            c[d].remove();
+                            c[d] = null;
+                            c.splice(d, 1)
+                        } else {
+                            c[d].move();
+                            c[d].draw()
+                        }
+                }, 40);
+                k(window, "scroll",
+
+                    function () {
+                        for (var e = c.length - 1; e >= 0; e--) c[e].draw()
+                    })
+            };
+            var removeSnow = function () {
+                clearInterval(m);
+                do {
+                    c.pop().remove();
+                } while (c.length);
+            };
+
+            function i(a) {
+                this.parent = document.body;
+                this.createEl(this.parent, a);
+                this.size = Math.random() * 5 + 5;
+                this.el.style.width = Math.round(this.size) + "px";
+                this.el.style.height = Math.round(this.size) + "px";
+                this.maxLeft = document.body.offsetWidth - this.size;
+                this.maxTop = document.body.offsetHeight - this.size;
+                this.left = Math.random() * this.maxLeft;
+                this.top = h().top + 1;
+                this.angle = 1.4 + 0.2 * Math.random();
+                this.minAngle = 1.4;
+                this.maxAngle = 1.6;
+                this.angleDelta = 0.01 * Math.random();
+                this.speed = 2 + Math.random()
+            }
+
+            i.prototype = {
+                createEl: function (a, b) {
+                    this.el = document.createElement("img");
+                    this.el.classname = "nicesnowclass";
+                    this.el.setAttribute("src", b || "{{'snow.png' | asset_url}}");
+                    this.el.style.position = "absolute";
+                    this.el.style.display = "block";
+                    this.el.style.zIndex = "99999";
+                    this.parent.appendChild(this.el)
+                },
+                move: function () {
+                    if (this.angle < this.minAngle || this.angle > this.maxAngle) this.angleDelta = -this.angleDelta;
+                    this.angle += this.angleDelta;
+                    this.left += this.speed * Math.cos(this.angle * Math.PI);
+                    this.top -= this.speed * Math.sin(this.angle * Math.PI);
+                    if (this.left < 0) this.left = this.maxLeft;
+                    else if (this.left > this.maxLeft) this.left = 0
+                },
+                draw: function () {
+                    this.el.style.top = Math.round(this.top) + "px";
+                    this.el.style.left = Math.round(this.left) + "px"
+                },
+                remove: function () {
+                    this.parent.removeChild(this.el);
+                    this.parent = this.el = null
+                }
+            };
+        })(jQuery);
+        jQuery(".snow-canvas").snow();
+    </script>
+
+
+    <style>
+        #e_itexpress_left {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 144px;
+            height: 150px;
+        }
+
+        #e_itexpress_right {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            right: 0;
+
+            width: 150px;
+            height: 143px;
+        }
+
+        @media (min-width: 992px) {
+
+            #e_itexpress_left,
+            #e_itexpress_right {
+                display: block;
+                pointer-events: none;
+            }
+        }
+    </style>
+    <img id="e_itexpress_left" src="./img/topleft.png">
+    <img id="e_itexpress_right" src="./img/topright.png">
+    <style>
+        body {
+            padding-bottom: 20px
+        }
+
+        #e_itexpress_footer {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 104px;
+            background: url(./img/ft.png) repeat-x bottom left
+        }
+
+        #e_itexpress_bottom_left {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            bottom: 20px;
+            left: 20px;
+
+            width: 174px;
+            height: 180px;
+        }
+
+        @media (min-width: 992px) {
+
+            #e_itexpress_footer,
+            #e_itexpress_bottom_left {
+                display: block;
+                pointer-events: none;
+            }
+        }
+    </style>
+    <div id="e_itexpress_footer"></div>
+    <img id="e_itexpress_bottom_left" src="./img/bottomleft.png">
+</body>
+
+</html>
